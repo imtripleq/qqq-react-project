@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Search from "@mui/icons-material/Search";
-import Badge from "@mui/material/Badge";
-
-import IconButton from "@mui/material/IconButton";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { Badge, IconButton } from "@mui/material";
+import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 
 const Container = styled.div`
   height: 60px;
@@ -47,11 +45,15 @@ const Logo = styled.h1`
 `;
 const Right = styled.div`
   flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
+  margin-left: 25px;
 `;
 
 const Navbar = () => {
@@ -62,19 +64,19 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input />
-            <Search />
+            <Search style={{ color: "gray", fontSize: 16 }} />
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>Dennis</Logo>
+          <Logo>Quinn.</Logo>
         </Center>
         <Right>
           <MenuItem>REGISTER</MenuItem>
           <MenuItem>SIGN IN</MenuItem>
           <IconButton aria-label="cart">
-            <StyledBadge badgeContent={4} color="secondary">
-              <ShoppingCartIcon />
-            </StyledBadge>
+            <Badge badgeContent={1} color="secondary">
+              <ShoppingCartOutlined />
+            </Badge>
           </IconButton>
         </Right>
       </Wrapper>
