@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
+import { sliderItems } from "../data";
 
 const Container = styled.div`
   width: 100%;
@@ -74,32 +75,20 @@ const Slider = () => {
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-        <Slide>
-          <ImageContainer>
-            <Image src="https://images.pexels.com/photos/6311650/pexels-photo-6311650.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"></Image>
-          </ImageContainer>
-          <InfoContainer>
-            <Title>XMAS SALE</Title>
-            <Desc>GET 30% OFF BEFORE 31 DEC 2021</Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide>
-          <ImageContainer></ImageContainer>
-          <InfoContainer>
-            <Title>XMAS SALE</Title>
-            <Desc>GET 30% OFF BEFORE 31 DEC 2021</Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide>
-          <ImageContainer></ImageContainer>
-          <InfoContainer>
-            <Title>XMAS SALE</Title>
-            <Desc>GET 30% OFF BEFORE 31 DEC 2021</Desc>
-            <Button>SHOP NOW</Button>
-          </InfoContainer>
-        </Slide>
+        {sliderItems.map((item) => {
+          return (
+            <Slide bg={item.bg} key={item.id}>
+              <ImageContainer>
+                <Image src={item.img}></Image>
+              </ImageContainer>
+              <InfoContainer>
+                <Title>{item.title}</Title>
+                <Desc>{item.desc}</Desc>
+                <Button>SHOP NOW</Button>
+              </InfoContainer>
+            </Slide>
+          );
+        })}
       </Wrapper>
       <Arrow direction="right">
         <ArrowRightOutlined />
