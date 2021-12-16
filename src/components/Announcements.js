@@ -12,7 +12,11 @@ const Container = styled.div`
 `;
 
 const Announcements = () => {
-  return <Container>Hello</Container>;
+  return (
+    <Container>
+      End of the year sales! Free shipping on orders over $30!
+    </Container>
+  );
 };
 
 export default Announcements;
