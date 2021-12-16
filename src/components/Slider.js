@@ -49,15 +49,17 @@ const ImageContainer = styled.div`
   flex: 1;
 `;
 const Image = styled.img`
-  height: 80%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 `;
 
 const InfoContainer = styled.div`
-  flex: 1;
+  flex: 0.5;
   padding: 50px;
-  /* z-index: 2;
-  position: absolute;
-  left: 20vh; */
+
+  /* position: absolute; */
+  /* left: 20vh; */
 `;
 
 const Title = styled.h1`
@@ -86,6 +88,8 @@ const Slider = () => {
       setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
     }
   };
+
+  // setInterval(() => handleClick("right"), 5000);
 
   return (
     <Container>
