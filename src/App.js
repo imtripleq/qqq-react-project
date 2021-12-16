@@ -1,6 +1,6 @@
-import React from "react";
 import Home from "./Pages/Home";
+import ProductList from "./Pages/ProductList";
 
 export default function App() {
-  return <Home />;
+  return <ProductList />;
 }
