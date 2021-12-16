@@ -1,4 +1,3 @@
-import { style } from "@mui/system";
 import styled from "styled-components";
 import Announcements from "../components/Announcements";
 import Footer from "../components/Footer";
