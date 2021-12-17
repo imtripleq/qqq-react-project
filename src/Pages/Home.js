@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Announcements from "../components/Announcements";
 import { Categories } from "../components/Categories";
 import Navbar from "../components/Navbar";
