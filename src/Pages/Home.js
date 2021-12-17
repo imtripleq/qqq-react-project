@@ -8,11 +8,11 @@ import Newsletter from "../components/Newsletter";
 import Footer from "../components/Footer";
 
 const Home = () => {
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => console.log(json));
-  });
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((res) => res.json())
+  //     .then((json) => console.log(json));
+  // });
 
   return (
     <div>
