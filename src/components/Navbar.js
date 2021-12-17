@@ -4,6 +4,7 @@ import Search from "@mui/icons-material/Search";
 import { Badge, IconButton } from "@mui/material";
 import ShoppingCartOutlined from "@mui/icons-material/ShoppingCartOutlined";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -62,6 +63,7 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+
   ${mobile({ fontSize: "12px", marginLeft: "10px" })}
 `;
 
@@ -80,13 +82,19 @@ const Navbar = () => {
           <Logo>Quinn.</Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
-          <IconButton aria-label="cart">
-            <Badge badgeContent={1} color="secondary">
-              <ShoppingCartOutlined />
-            </Badge>
-          </IconButton>
+          <Link to="register" style={{ textDecoration: "none" }}>
+            <MenuItem>REGISTER</MenuItem>
+          </Link>
+          <Link to="login" style={{ textDecoration: "none" }}>
+            <MenuItem>SIGN IN</MenuItem>
+          </Link>
+          <Link to="cart" style={{ textDecoration: "none" }}>
+            <IconButton aria-label="cart">
+              <Badge badgeContent={1} color="secondary">
+                <ShoppingCartOutlined />
+              </Badge>
+            </IconButton>
+          </Link>
         </Right>
       </Wrapper>
     </Container>
